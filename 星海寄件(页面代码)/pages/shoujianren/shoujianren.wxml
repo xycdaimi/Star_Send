@@ -1,0 +1,26 @@
+<!--pages/shoujianren/shoujianren.wxml-->
+<view>
+  <form bindsubmit="dizhi">
+    <view class="container">
+      <view class="ji">
+        <view class="conner">收件人</view>
+        <view>
+          <input type="text" name="ming2" placeholder="真实姓名" value="{{name2}}" placeholder-class="placeholder-style"/>
+          <input type="number" name="tele2" id="" maxlength="11" placeholder="电话" value="{{tel2}}" placeholder-class="placeholder-style"/>
+          <view class="section">
+            <view class="section__title">省市区</view>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <view class="picker">
+                {{region[0]}}  {{region[1]}}  {{region[2]}}
+              </view>
+            </picker>
+          </view>
+          <input type="text" name="area2" placeholder="详细地址" value="{{area2}}" placeholder-class="placeholder-style"/>
+          <input type="text" placeholder="公司名称 (选填)" name="company2" value="{{company2}}" placeholder-class="placeholder-style"/>
+        </view>
+      </view>
+      <button form-type="submit" class="anniu">保存</button>
+    </view>
+    
+  </form>
+</view>

@@ -1,0 +1,58 @@
+/* pages/jijianren/jijianren.wxss */
+.container{
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  height: 100vh;
+}
+.ji{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 600rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20rpx;
+}
+.placeholder-style{
+  color: yellow;
+}
+.anniu{
+  margin-top: 20rpx;
+  border-radius: 50rpx;
+  background-color: rgb(99, 93, 99);
+  color: azure;
+}
+.conner{
+  height: 80rpx;
+  font-family: 'Pmzdqst';
+  font-size: 30px;
+  padding-top: 20rpx;
+}
+input{
+  margin: 0 auto;
+  height: 100rpx;
+  border-top: yellow solid 1rpx;
+  width: 90%;
+}
+.section{
+  margin: 0 auto;
+  height: 100rpx;
+  border-top: yellow solid 1rpx;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+}
+.section__title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60rpx;
+  color: yellow;
+}
+picker{
+  width: 65%;
+}
+.picker{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+}

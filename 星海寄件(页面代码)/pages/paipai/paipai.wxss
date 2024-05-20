@@ -1,0 +1,158 @@
+/* pages/paipai/paipai.wxss */
+.ti{
+  font-family: 'Pmzdqst';
+  color: rgb(117, 218, 231);
+  font-size: 25px;
+  height: 45px;
+  width:100%;
+  padding-left: 15px;
+}
+.sou{
+  height: 70px;
+  width:96%;
+  background-color: rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 50rpx;
+}
+.inp{
+  width: 82%;
+  height: 62%;
+  border: yellow 2px solid;
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin:10px 15px;
+  margin-right: 0;
+  color: yellow;
+  padding-left: 5px;
+}
+.placeholder-style{
+  color: yellow;
+}
+.tu{
+  height: 62%;
+  width: 8%;
+  border: yellow 2px solid;
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tu image{
+  height: 90%;
+  width: 90%;
+}
+
+.ji{
+  height: 730px;
+}
+.hua{
+  width:430px;
+  height: 70px;
+}
+.tabBox {
+  padding: 20rpx;
+}
+
+.navBox {
+  /* tab整体样式 */
+  height: 74rpx;
+  display: flex;
+  padding: 1.5% 1.5%;
+  border-radius: 50rpx;
+  background: #E5EEFD;
+}
+
+.fontColorBox,
+.titleBox {
+  /* 共同样式 */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fontColorBox {
+  /* 选中tab样式 */
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(151deg, #2F7EFC 0%, #7BADFC 100%);
+  border-radius: 50rpx;
+}
+
+.titleBox {
+  /* 未选中tab样式 */
+  color: #1A1A1A;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiperTtemBox {
+  /* 内容样式 */
+  padding: 16rpx;
+  font-size: 28rpx;
+  height:280px;
+}
+.qj{
+  height: 230px;
+  width:100%;
+  background-color: rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+}
+.danhao{
+  height: 50px;
+  width:84%;
+  font-size: 20px;
+  color:yellow;
+  padding-left:10px ;
+  padding-top: 10px;
+  margin-left: 5%;
+  border-bottom:2px solid;
+}
+.sa{
+  height: 70px;
+  width:84%;
+  font-size: 20px;
+  color:yellow;
+  padding-left:10px ;
+  padding-top: 15px;
+  margin-left: 5%;
+}
+.sau{
+  height: 60px;
+  width:84%;
+  font-size: 20px;
+  color:yellow;
+  padding-left:10px ;
+  padding-top: 10px;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  border-bottom:2px solid;
+}
+.ph{
+  height:80px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+}
+.pho{
+  height: 50px;
+  width: 40%;
+  margin-left: 8%;
+  color: yellow;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pho image{
+  height: 50px;
+  width: 45px;
+}
+

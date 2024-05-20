@@ -1,0 +1,107 @@
+<!--pages/send/send.wxml-->
+<view class="container">
+<text class="title">星海寄件</text>
+<view class="block">
+    <input type="text" placeholder="请输入订单号" class="inp" name="search" placeholder-class="placeholder-style" bindinput="onsetsearch"/>
+    <view class="tu" bind:tap="search">
+      <image src="/img/05.png" mode=""/>
+    </view>
+  </view>
+<view class="block p" wx:if="{{sear==0}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani}}">
+  <image src="/img/shan.png" mode="" class="shan" bind:tap="shanchu"/>
+  <view class="mokuai">
+    <image src="/img/14.png"/>
+    <text>{{xian['订单号']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <image src="/img/16.png"/>
+    <text>寄件人{{xian['寄件人uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/07.png"/>
+    <text>寄件人{{xian['寄件人电话']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>{{xian['寄件人地址']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>收件人{{xian['收件人uid']==''?'ID':xian['收件人uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/07.png"/>
+    <text>收件人电话{{xian['收件人电话']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>{{xian['收件人地址']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>快递员{{xian['快递员uid']==''?'ID':xian['快递员uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="" style="border-bottom: none;">
+    <image src="/img/07.png"/>
+    <text>快递员{{xian['快递员电话']==''?'':xian['快递员电话']}}</text>
+    <text class="e">></text>
+  </view>
+</view>
+<view class="block p" wx:if="{{sear==1}}">
+  <image src="/img/shan.png" mode="" class="shan" bind:tap="shanchu"/>
+  <view class="mokuai">
+    <image src="/img/14.png"/>
+    <text>{{da['订单号']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <image src="/img/16.png"/>
+    <text>寄件人{{da['寄件人uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/07.png"/>
+    <text>寄件人{{da['寄件人电话']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>{{da['寄件人地址']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>收件人{{da['收件人uid']==''?'ID':da['收件人uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/07.png"/>
+    <text>收件人{{da['收件人电话']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>{{da['收件人地址']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>快递员{{da['快递员uid']==''?'ID':da['快递员uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="" style="border-bottom: none;">
+    <image src="/img/07.png"/>
+    <text>快递员{{da['快递员电话']==''?'':da['快递员电话']}}</text>
+    <text class="e">></text>
+  </view>
+</view>
+<view class="butt"></view>
+</view>

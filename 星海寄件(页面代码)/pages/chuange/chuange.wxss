@@ -1,0 +1,45 @@
+/* pages/chuange/chuange.wxss */
+.ti{
+  font-family: 'Pmzdqst';
+  color: rgb(117, 218, 231);
+  font-size: 25px;
+  height: 45px;
+  width:100%;
+  padding-left: 15px;
+}
+.question{
+  font-family: 'Pmzdqst';
+  color: yellow;
+  font-size: 50px;
+  height: 400px;
+  width:100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px;
+}
+.form-container{
+  height: 250px;
+  width: 100%;
+  padding: 20rpx;
+}
+checkbox-group view{
+  width: 100%;
+  height: 100px;
+}
+checkbox-group view text{
+  color: yellow;
+}
+.tijiao{
+  background-color:rgb(94, 96, 224);
+  height: 80rpx;
+  text-align: center;
+  font-size: larger;
+}
+.ty{
+  height: 100px;
+  width: 100%;
+  margin-left:27% ;
+  margin-top: 10%;
+}

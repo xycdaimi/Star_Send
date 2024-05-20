@@ -1,0 +1,82 @@
+<!--pages/kuaidi/kuaidi.wxml-->
+<wxs module="text">
+    var getPhone = function (val) {
+      var phone;
+      if(val){
+       phone = val.substring(0, 3) + '****' + val.substring(7);
+      }
+      return phone;
+    }
+module.exports.getPhone = getPhone;
+</wxs>
+<view class="container">
+  <text class="title">星海寄件</text>
+  <view class="block">
+    <input type="text" placeholder="请输入订单号" class="inp" name="search" placeholder-class="placeholder-style" bindinput="onsetsearch"/>
+    <view class="tu" bind:tap="search">
+      <image src="/img/05.png" mode=""/>
+    </view>
+  </view>
+  <view class="block p" wx:if="{{sear==0}}">
+    <view class="tab">
+      <view class="an1" bind:tap="set1">
+        <text>我的寄件</text>
+      </view>
+      <view class="an2" bind:tap="set2">
+        <text>我的收件</text>
+      </view>
+    </view>
+    <view style="height: 9vh;"></view>
+    <view wx:if="{{flag==0&&t==1}}" class="tt" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani1}}">
+      <view wx:for="{{ding}}" wx:key="indx">
+        <view class="qj" bind:tap="xiangqing" data-value="{{index}}" hidden="{{item['订单号']==''}}">
+          <view class="danhao">运单号 :{{item['订单号']}}</view>
+          <view class="sa">收件人手机号:{{text.getPhone(item['收件人电话'])}}</view>
+          <view class="sau">派件时间 :{{item['派件时间']!=null?item['派件时间']:''}}</view>
+          <view class=" ph">
+            <view class="pho">
+              <image src="/img/03.png" mode=""/><text>快递员电话</text>
+            </view>
+            <view class="pho">
+              <image src="/img/04.png" mode=""/><text>收件电话</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{flag==1&&t==1}}" class="tt" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani2}}">
+      <view wx:for="{{ding2}}" wx:key="indx">
+        <view class="qj" bind:tap="xiangqing" data-value="{{index}}" hidden="{{item['订单号']==''}}">
+          <view class="danhao">运单号 :{{item['订单号']}}</view>
+          <view class="sa">寄件人手机号:{{text.getPhone(item['寄件人电话'])}}</view>
+          <view class="sau">派件时间 :{{item['派件时间']!=null?item['派件时间']:''}}</view>
+          <view class=" ph">
+            <view class="pho">
+              <image src="/img/03.png" mode=""/><text>快递员电话</text>
+            </view>
+            <view class="pho">
+              <image src="/img/04.png" mode=""/><text>取件码</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{sear==1}}" class="block p">
+  <view wx:if="{{da==''}}"><text class="nono">找不到该订单</text></view>
+    <view class="qj" bind:tap="xiangqing" data-value="{{'search'}}" hidden="{{da==''}}">
+      <view class="danhao">运单号 :{{da['订单号']}}</view>
+      <view class="sa">收件人手机号:{{da['收件人电话']}}</view>
+      <view class="sau">派件时间 :{{da['派件时间']!=null?da['派件时间']:''}}</view>
+      <view class=" ph">
+        <view class="pho">
+          <image src="/img/03.png" mode=""/><text>拨打电话</text>
+        </view>
+        <view class="pho">
+          <image src="/img/04.png" mode=""/><text>取件码</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="butt"></view>
+</view>

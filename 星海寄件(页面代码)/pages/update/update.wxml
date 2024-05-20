@@ -1,0 +1,24 @@
+<!--pages/update/update.wxml-->
+<view class="container">
+  <text class="ti" >星海寄件</text>
+  <view class="block p">
+  <view class="mokuai">
+    <input type="text"/>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <input type="text"/>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <input type="text"/>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <input type="number" name="" id=""/>
+    <text class="e">></text>
+  </view>
+</view>
+
+</view>
+

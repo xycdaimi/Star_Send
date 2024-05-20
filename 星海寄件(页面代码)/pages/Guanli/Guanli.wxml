@@ -1,0 +1,15 @@
+<!--pages/Guanli/Guanli.wxml-->
+<view class="container">
+  <text class="title">星海寄件</text>
+  <view class="block" bind:tap="usryong">
+  <text>用户</text>
+  </view>
+  <view class="block" bind:tap="usrkuai">
+  <text>快递员</text>
+  </view>
+  <view class="block" bind:tap="kuaixin">
+  <text>快递信息</text>
+  </view>
+  <button bind:tap="exit">退出</button>
+  <view style="height: 10vh;width: 100%;"></view>
+</view>

@@ -1,0 +1,21 @@
+/* pages/Guanli/Guanli.wxss */
+.title{
+  width: 90%;
+  font-family: 'Pmzdqst';
+  color: aqua;
+  font-size: 30px;
+  margin-bottom: 10rpx;
+}
+.block{
+  height: 8vh;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(142, 209, 248, 0.5);
+  border: turquoise 5px solid;
+  border-radius: 10px;
+  font-family: 'Pmzdqst';
+  font-size: 60px;
+  color: yellow;
+}

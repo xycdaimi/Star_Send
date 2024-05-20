@@ -1,0 +1,36 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+  <text class="title">注册</text>
+  <view class="block">
+    <label for="zhan" class="inw">昵称 ：</label>
+    <input type="text" placeholder="例如：张三" class="inp" name="username" placeholder-class="placeholder-style" bindinput="onsetname"/>
+    <view class="tu">
+      <image src="/img/00.png" mode=""/>
+    </view>
+  </view>
+  <view class="block">
+    <label for="password" class="inw">密码 ：</label>
+    <input type="password" placeholder="请输入密码" class="inp" name="password" id="password" placeholder-class="placeholder-style" bindinput="onsetpass"/>
+    <view class="tu">
+      <image src="/img/01.png" mode=""/>
+    </view>
+  </view>
+  <view class="block">
+    <label for="rpassword" class="inw p">确认密码 ：</label>
+    <input type="rpassword" placeholder="请再次输入密码" class="inp" name="rpassword" id="rpassword" placeholder-class="placeholder-style" bindinput="onsetrpass"/>
+    <view class="tu">
+      <image src="/img/04.png" mode=""/>
+    </view>
+  </view>
+  <view class="block">
+    <label for="tel" class="inw">手机 ：</label>
+    <input type="number" placeholder="请输入手机号" class="inp" name="tel" id="tel" placeholder-class="placeholder-style" bindinput="onsettel" maxlength="11"/>
+    <view class="tu">
+      <image src="/img/03.png" mode=""/>
+    </view>
+  </view>
+  <view class="block but">
+    <button style="width: 75%;" bind:tap="zhuce" class="t">注册</button>
+  </view>
+  <view class="block"></view>
+</view>

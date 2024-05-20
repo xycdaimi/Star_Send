@@ -1,0 +1,127 @@
+/* pages/paisong/paisong.wxss */
+.title{
+  width: 90%;
+  font-family: 'Pmzdqst';
+  color: aqua;
+  font-size: 30px;
+}
+.block{
+  height: 10vh;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(142, 209, 248, 0.5);
+  border-radius: 10px;
+}
+.p{
+  height: 85vh;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+}
+.inp{
+  width: 75%;
+  height: 65%;
+  border: rgb(156, 156, 156) 2px solid;
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: 0px auto;
+  margin-left: 5%;
+  margin-right: 0px;
+  color: yellow;
+  padding-left: 10px;
+}
+.placeholder-style{
+  color: yellow;
+}
+.tu{
+  margin: 0 auto;
+  margin-left: 0px;
+  height: 65%;
+  width: 10%;
+  border: rgb(156, 156, 156) 2px solid;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-left: none;
+  padding-right: 10rpx;
+}
+.tu image{
+  margin-top: 25%;
+  margin-left: 0px;
+  margin-right: 0px;
+  height:60%;
+  width: 70%;
+}
+.butt{
+  width: 100%;
+  height: 10vh;
+}
+.tt{
+  height: 230px;
+  width:100%;
+}
+.nono{
+  font-family: 'Pmzdqst';
+  font-size: 36px;
+  color: yellow;
+}
+.qj{
+  height: 230px;
+  width:100%;
+  background-color: rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+}
+.danhao{
+  height: 50px;
+  width:84%;
+  font-size: 20px;
+  color:yellow;
+  padding-left:10px ;
+  padding-top: 10px;
+  margin-left: 5%;
+  border-bottom:2px solid;
+}
+.sa{
+  height: 70px;
+  width:84%;
+  font-size: 20px;
+  color:yellow;
+  padding-left:10px ;
+  padding-top: 15px;
+  margin-left: 5%;
+}
+.sau{
+  height: 60px;
+  width:84%;
+  font-size: 20px;
+  color:yellow;
+  padding-left:10px ;
+  padding-top: 10px;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  border-bottom:2px solid;
+}
+.ph{
+  height:80px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+}
+.pho{
+  height: 50px;
+  width: 40%;
+  margin-left: 8%;
+  color: yellow;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pho image{
+  height: 50px;
+  width: 45px;
+}

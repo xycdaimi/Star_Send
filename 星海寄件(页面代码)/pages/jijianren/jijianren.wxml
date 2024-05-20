@@ -1,0 +1,25 @@
+<!--pages/jijianren/jijianren.wxml-->
+<view>
+  <form bindsubmit="dizhi">
+    <view class="container">
+      <view class="ji">
+        <view class="conner">寄件人</view>
+        <view>
+          <input type="text" name="ming1" placeholder="真实姓名" value="{{name1}}" placeholder-class="placeholder-style"/>
+          <input type="number" name="tele1" id="" maxlength="11" placeholder="电话" value="{{tel1}}" placeholder-class="placeholder-style"/>
+          <view class="section">
+            <view class="section__title">省市区</view>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <view class="picker">
+                {{region[0]}}  {{region[1]}}  {{region[2]}}
+              </view>
+            </picker>
+          </view>
+          <input type="text" name="area1" placeholder="详细地址" value="{{area1}}" placeholder-class="placeholder-style"/>
+          <input type="text" placeholder="公司名称 (选填)" name="company1" value="{{company1}}" placeholder-class="placeholder-style"/>
+        </view>
+      </view>
+      <button form-type="submit" class="anniu">保存</button>
+    </view>
+  </form>
+</view>

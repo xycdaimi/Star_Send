@@ -1,0 +1,79 @@
+<!--  查快递员-->
+
+<view class="container">
+<text class="title">星海寄件</text>
+<view class="block">
+    <input type="text" placeholder="请输入快递员ID" class="inp" name="search" placeholder-class="placeholder-style" bindinput="onsetsearch"/>
+    <view class="tu" bind:tap="search">
+      <image src="/img/05.png" mode=""/>
+    </view>
+  </view>
+<view class="block p" wx:if="{{sear==0}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani}}">
+  <image src="/img/shan.png" mode="" class="shan" bind:tap="shanchu"/>
+  <view class="mokuai">
+    <image src="/img/04.png"/>
+    <text>全部订单</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <image src="/img/03.png"/>
+    <text>{{xian['tel']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>完成订单</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>{{xian['uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/14.png"/>
+    <text>{{xian['username']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/06.png"/>
+    <text>{{xian['password']}}</text>
+    <text class="e">></text>
+  </view>
+</view>
+<view class="block p" wx:if="{{sear==1}}">
+  <image src="/img/shan.png" mode="" class="shan" bind:tap="shanchu"/>
+  <view class="mokuai">
+    <image src="/img/04.png"/>
+    <text>全部订单</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <image src="/img/03.png"/>
+    <text>{{da['tel']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>完成订单</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>{{da['uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/14.png"/>
+    <text>{{da['username']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/06.png"/>
+    <text>{{da['password']}}</text>
+    <text class="e">></text>
+  </view>
+</view>
+<view class="butt"></view>
+</view>
+

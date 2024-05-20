@@ -1,0 +1,68 @@
+<!-- 查包裹-->
+<wxs module="text">
+    var getArea = function (val) {
+      var area;
+      if(val){
+       area = val.substring(0, 9) + '****';
+      }
+      return area;
+    }
+module.exports.getArea = getArea;
+</wxs>
+<view class = "container page">
+  <text class="title">星海寄件</text>
+  <view class="lun">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{premar}}" next-margin="{{nemar}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+          <image src="../../img{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="block p">
+    <view class="block t">
+      <image src="/img/12.png" mode=""/><text class="biaoti">订单号:</text>
+      <text>{{xinxi['订单号']}}</text><text class="fuzhi" bind:tap="">复制</text>
+    </view>
+    <view class="block t">
+      <image src="/img/16.png" mode=""/><text class="biaoti">快递员:</text>
+      <text>{{uid}}</text><text class="fuzhi" bind:tap="">拨打电话</text>
+    </view>
+    <view class="block t">
+      <image src="/img/11.png" mode=""/>
+      <view class="cc">
+        <view class="hen">
+          <text class="biaoti">寄件地址:</text>
+          <text>{{text.getArea(xinxi['寄件人地址'])}}</text>
+          <text class="fuzhi gai" bind:tap="">复制</text>
+        </view>
+        <view class="hen">
+          <text class="biaoti">收货地址:</text>
+          <text>{{text.getArea(xinxi['收件人地址'])}}</text>
+          <text class="fuzhi" bind:tap="">复制</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{js!=3}}" style="width: 92%;">
+    <view wx:for="{{info}}" wx:key="inde" style="width: 100%;">
+      <view wx:if="{{index<=type}}" style="width: 100%;">
+        <view class="block">
+          <image src="/img/10.png" mode=""/>
+          <view>
+          <text class="qe">{{item}}</text><text class="qe" wx:if="{{index>0&&index<5}}">{{tel}}</text><button size="mini" bind:tap="qianshou" wx:if="{{type==4&&js==1&&index==0&&but=='签收'}}" class="button1">{{but}}</button>
+        </view>
+        </view>
+      </view>
+    </view>
+    </view>
+    <view wx:if="{{js==3}}" style="width: 92%;">
+      <view class="block" style="width: 100%;">
+        <button bind:tap="jie" wx:if="{{type<4}}">{{into[type]}}</button>
+      </view>
+    </view>
+  </view>
+</view>

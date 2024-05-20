@@ -1,0 +1,85 @@
+<!--pages/main/main.wxml-->
+<wxs module="text">
+    var getPhone = function (val) {
+      var phone;
+      if(val){
+       phone = val.substring(0, 3) + '****' + val.substring(7);
+      }
+      return phone;
+    }
+module.exports.getPhone = getPhone;
+</wxs>
+<view class="container">
+  <text class="title">星海寄件</text>
+  <view class="block">
+    <view class="block_p">
+      <view class="block_d" bind:tap="zhuan1">
+        <label class="zi">寄件人  <text></text>{{text.getPhone(tel1)}}</label>
+        <text class="dz">{{are1}}</text>
+      </view>
+      <view class="line_h"></view>
+      <view class="dizhi">地址薄</view>
+    </view>
+    <view class="line_set"></view>
+    <view class="block_p">
+      <view class="block_d" bind:tap="zhuan2">
+        <label class="zi">收件人  <text></text>{{text.getPhone(tel2)}}</label>
+        <text class="dz">{{are2}}</text>
+      </view>
+      <view class="line_h"></view>
+      <view class="dizhi">地址薄</view>
+    </view>
+  </view>
+  <view class="block">
+    <view class="block_p">
+      <view class="block_d f">
+        <label class="zi">物品类型</label>
+        <radio-group bindchange="lei" name="wu">
+          <radio value="1"/>文件
+          <radio value="2"/>果蔬
+          <radio value="3"/>医药
+          <radio value="4"/>食品
+          <radio value="5"/>大件
+          <radio value="6"/>其他
+        </radio-group>
+      </view>
+    </view>
+    <view class="line_set"></view>
+    <view class="block_p">
+    <view class="yu">
+      <label class="zi">预估重量</label>
+      <view class="wl">
+        <button size="mini" style="width: 150rpx;margin-left: 20rpx;margin-right: 20rpx;" bind:tap="jian" class="jian">-</button>
+        <text class="zhong">{{zhong}}kg</text>
+        <button size="mini" style="width: 150rpx;margin-left: 20rpx;margin-right: 20rpx;" bind:tap="jia" class="jia">+</button>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class="block p">
+    <view class="block_p">
+      <view class="block_d f">
+        <label class="zi">寄件方式</label>
+        <radio-group bindchange="fan">
+          <radio value="1"/>服务点自寄
+          <radio value="2"/>上门取件
+          <radio value="3"/>自行联系快递员
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <view class="block p">
+    <view class="block_p">
+      <view class="block_d f">
+        <label class="zi">付款方式</label>
+        <radio-group bindchange="fu">
+          <radio value="1"/>寄付现结
+          <radio value="2"/>到付
+          <radio value="3"/>寄付月结
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <view class="bl"><button class="xd" bind:tap="cun">下单</button></view>
+  <view class="butt"></view>
+</view>

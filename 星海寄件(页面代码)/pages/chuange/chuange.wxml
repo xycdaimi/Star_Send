@@ -1,0 +1,20 @@
+<!--pages/chuange/chuange.wxml-->
+<view class="container">
+  <text class="ti" >星海寄件</text>
+  <view class="question">
+  <text>你要成为</text>
+  <text>星海寄件</text>
+  <text>的快递员吗</text>
+  </view>
+  <view class="form-container">
+  <button class="tijiao" bind:tap="chen">确认</button>
+    <checkbox-group bindchange="set">
+    <view class="ty">
+      <checkbox value="1"/><text>我已同意《快递员条例》</text>
+    </view>
+
+  </checkbox-group>
+
+
+</view>
+</view>

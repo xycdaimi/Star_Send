@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Guanli/Guanli",
+    "pages/CheckUser/CheckUser",
+    "pages/CheckPackage/CheckPackage",
+    "pages/CheckCourier/CheckCourier",
+    "pages/paipai/paipai",
+    "pages/update/update",
+    "pages/login/login",
+    "pages/main/main",
+    "pages/register/register",
+    "pages/logs/logs",
+    "pages/geren/geren",
+    "pages/kuaidi/kuaidi",
+    "pages/jijianren/jijianren",
+    "pages/shoujianren/shoujianren",
+    "pages/chuange/chuange",
+    "pages/jiedan/jiedan",
+    "pages/paisong/paisong",
+    "pages/shouji/shouji",
+    "pages/send/send"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "The StarSea",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "color": "#8E8E8E",
+    "selectedColor": "#67CBF8",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "寄快递",
+        "iconPath": "img/首页.png",
+        "selectedIconPath": "img/首页-2.png"
+      },
+      {
+        "pagePath": "pages/kuaidi/kuaidi",
+        "text": "查快递",
+        "iconPath": "img/寄件.png",
+        "selectedIconPath": "img/寄件-2.png"
+      },
+      {
+        "pagePath": "pages/jiedan/jiedan",
+        "text": "接单",
+        "iconPath": "img/包裹.png",
+        "selectedIconPath": "img/包裹-2.png"
+      },
+      {
+        "pagePath": "pages/paisong/paisong",
+        "text": "待派送",
+        "iconPath": "img/物流.png",
+        "selectedIconPath": "img/物流-2.png"
+      },
+      {
+        "pagePath": "pages/geren/geren",
+        "text": "我",
+        "iconPath": "img/个人.png",
+        "selectedIconPath": "img/个人-2.png"
+      }
+    ]
+  }
+}

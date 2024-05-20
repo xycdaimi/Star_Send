@@ -1,0 +1,39 @@
+<!--pages/geren/geren.wxml-->
+<wxs module="text">
+    var getPhone = function (val) {
+      var phone='头像';
+      if(val&&val!='头像'){
+       phone = val.substring(0, 3) + '****' + val.substring(7);
+      }
+      return phone;
+    }
+module.exports.getPhone = getPhone;
+</wxs>
+<view class="container">
+<text class="title">星海寄件</text>
+<view class="block p">
+  <view class="mokuai">
+    <text>{{text.getPhone(tel)}}</text>
+    <image src="/img/头像.png" mode=""/>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <text>{{name}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <text>历史记录</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="chuangeKuai">
+    <text>{{kuai}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <text>修改个人信息</text>
+    <text class="e">></text>
+  </view>
+</view>
+<button bind:tap="downandup">{{zt}}</button>
+<view class="butt"></view>
+</view>

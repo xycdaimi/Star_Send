@@ -1,0 +1,79 @@
+<!--pages/CheckUser/CheckUser.wxml-->
+<!-- 查用户-->
+<view class="container">
+<text class="title">星海寄件</text>
+<view class="block">
+    <input type="text" placeholder="请输入用户昵称或用户ID" class="inp" name="search" placeholder-class="placeholder-style" bindinput="onsetsearch"/>
+    <view class="tu" bind:tap="search">
+      <image src="/img/05.png" mode=""/>
+    </view>
+  </view>
+<view class="block p" wx:if="{{sear==0}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani}}">
+  <image src="/img/shan.png" mode="" class="shan" bind:tap="shanchu"/>
+  <view class="mokuai">
+    <image src="/img/13.png"/>
+    <text>{{xian['username']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <image src="/img/03.png"/>
+    <text>{{xian['tel']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>{{xian['area']==null?'地址':xian['area']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>{{xian['uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/14.png"/>
+    <text>{{info[xian.kuaidi]}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="" style="border-bottom: none;">
+    <image src="/img/06.png"/>
+    <text>{{xian['password']}}</text>
+    <text class="e">></text>
+  </view>
+</view>
+<view class="block p" wx:if="{{sear==1}}">
+  <image src="/img/shan.png" mode="" class="shan" bind:tap="shanchu"/>
+  <view class="mokuai">
+    <image src="/img/13.png"/>
+    <text>{{da['username']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai">
+    <image src="/img/03.png"/>
+    <text>{{da['tel']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/15.png"/>
+    <text>{{da['area']==null?'地址':da['area']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/16.png"/>
+    <text>{{da['uid']}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="">
+    <image src="/img/14.png"/>
+    <text>{{info[xian.kuaidi]}}</text>
+    <text class="e">></text>
+  </view>
+  <view class="mokuai" bind:tap="" style="border-bottom: none;">
+    <image src="/img/06.png"/>
+    <text>{{da['password']}}</text>
+    <text class="e">></text>
+  </view>
+</view>
+<view class="butt"></view>
+</view>
+

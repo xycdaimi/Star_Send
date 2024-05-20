@@ -1,0 +1,78 @@
+/*查包裹*/
+.title{
+  width: 90%;
+  font-family: 'Pmzdqst';
+  color: aqua;
+  font-size: 30px;
+  margin-bottom: 20rpx;
+}
+.button1{
+  position: absolute;
+  right: 7%;
+  background-color: steelblue;
+  color: aliceblue;
+  border: aqua 3px solid;
+}
+.page{
+  background-color: rgb(222,222,222);
+  height: 100vh;
+}
+
+.block{
+  height: 7.5vh;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.et{
+  flex-direction: column;
+}
+.qe{
+  color: yellow;
+  font-size: 20px;
+}
+.p{
+  height: 70vh;
+  display:flex;
+  flex-direction: column;
+  background-color: rgba(142, 209, 248, 0.5);
+}
+.t{
+  border-radius: 0;
+  border-bottom: yellow 1px solid;
+}
+.block image{
+  height: 50%;
+  width: 10%;
+}
+.biaoti{
+  font-family: 'Pmzdqst';
+  color: yellow;
+  font-size: 24px;
+}
+.fuzhi{
+  color: yellow;
+  position: absolute;
+  right: 6%;
+  border: yellow 3px solid;
+  padding: 2rpx;
+  border-radius: 10px;
+}
+.hen{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50%;
+}
+.cc{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.lun{
+  width: 100%;
+}
+.lun image{
+  width: 100%;
+}

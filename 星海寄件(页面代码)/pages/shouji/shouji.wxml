@@ -1,0 +1,23 @@
+<!--pages/shouji/shouji.wxml-->
+<view class="container">
+  <text class="title">星海寄件</text>
+  <view class="block">
+    <label for="zhan" class="inw">手机号 ：</label>
+    <input type="text" placeholder="请输入手机号" class="inp" name="tel" placeholder-class="placeholder-style" bindinput="onsettel" maxlength="11"/>
+    <view class="tu">
+      <image src="/img/00.png" mode=""/>
+    </view>
+  </view>
+  <view class="block">
+    <label for="password" class="inw">验证码 ：</label>
+    <input type="password" placeholder="请输入验证码" class="inp cc" placeholder-class="placeholder-style" bindinput="getCodeValue" value='{{code}}'/>
+    <view class="yan" bindtap="getVerificationCode" disabled='{{disabled}}'>
+      <text>{{codename}}</text>
+    </view>
+  </view>
+  <view class="block but">
+    <button style="width: 75%;" bind:tap="denglu" class="t">登录</button>
+  </view>
+  <view class="block"></view>
+  <view class="block"></view>
+</view>

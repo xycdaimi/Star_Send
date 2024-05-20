@@ -1,0 +1,43 @@
+<!--pages/paipai/paipai.wxml-->
+<view class="container">
+  <text class="ti" >星海寄件</text>
+  <view class="sou">
+    <input type="text" placeholder="请输入快递单号查询/寄件人手机号" class="inp" 
+    placeholder-class="placeholder-style" bindinput="onsetname"/>
+    <view class="tu">
+      <image src="/img/05.png" mode=""/>
+    </view>
+  </view>
+  <view class="hua">
+    <view class="tabBox">
+    <!-- Tab布局 -->
+      <view class="navBox">
+          <view class="titleBox" wx:for="{{tabList}}" bindtap="tabsOn" data-idx="{{item.index}}">
+              <text class="{{item.index == tabsId ? 'fontColorBox' : ''}}">{{item.title}}</text>
+          </view>
+      </view>
+    <!-- 内容布局 -->
+      <swiper class="swiperTtemBox" bindchange="slideOn" current="{{tabsId}}" circular>
+        <!-- circular 启用循环滑动 -->
+          <swiper-item>
+              <view class="qj">
+              <view class="danhao">运单号 :<text></text></view>
+              <view class="sa">收件人手机号:<text></text></view>
+              <view class="sau">派件时间 :<text></text></view>
+              <view class=" ph">
+              <view class="pho"><image src="/img/03.png" mode=""/><text>拨打电话</text></view>
+              <view class="pho"><image src="/img/04.png" mode=""/><text>取件码</text></view>
+              </view>
+              </view>
+          </swiper-item>
+          <swiper-item>
+              <view>活动内容</view>
+          </swiper-item>
+          <swiper-item>
+              <view>功能内容</view>
+          </swiper-item>
+      </swiper>
+  </view>
+</view>
+<view class="ji"></view>
+</view>

@@ -1,0 +1,25 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  margin-top: 200px;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-bottom: 70%;
+}
+.user-motto{
+  font-family: 'Pmzdqst';
+  color: yellow;
+  font-size: 80rpx;
+}

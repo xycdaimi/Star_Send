@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <text class="title">星海寄件</text>
+  <view class="block">
+    <label for="zhan" class="inw">账号 ：</label>
+    <input type="text" placeholder="请输入昵称或手机号" class="inp" name="zhan" placeholder-class="placeholder-style" bindinput="onsetzhan"/>
+    <view class="tu">
+      <image src="/img/00.png" mode=""/>
+    </view>
+  </view>
+  <view class="block">
+    <label for="password" class="inw">密码 ：</label>
+    <input type="password" placeholder="请输入密码" class="inp" name="password" id="password" placeholder-class="placeholder-style" bindinput="onsetpass"/>
+    <view class="tu">
+      <image src="/img/01.png" mode=""/>
+    </view>
+  </view>
+  <view class="block but">
+    <button style="width: 75%;" bind:tap="denglu" class="t">登录</button>
+  </view>
+  <view class="block but">
+    <button style="width: 75%;" bind:tap="zhuce" class="t">注册</button>
+  </view>
+  <view class="block but">
+    <navigator url="/pages/shouji/shouji" class="l"><text class="tiao">使用手机登录</text></navigator>
+    <navigator url="" class="f"><text class="tiao">使用手机注册</text></navigator>
+  </view>
+  <view class="block"></view>
+  <view class="block"></view>
+</view>
